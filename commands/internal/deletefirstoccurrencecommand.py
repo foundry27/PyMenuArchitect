@@ -23,6 +23,10 @@ class DeleteFirstOccurrenceCommand(MenuCommand):
     def execute(self, session: Session, args: Dict[str, Any]) -> ExitCode:
         data_to_remove = get_data_to_remove(session)
 
-        args['data'].remove(data_to_remove)
+        try:
+            args['data'].remove(data_to_remove)
+            session.get_io().output('Removed the first instance of data point "{}"'.format(data_to_remove))
+        except ValueError:
+            session.get_io().error('Data point "{}" is not present in the data store!'.format(data_to_remove))
 
         return ExitCode.SUCCESS

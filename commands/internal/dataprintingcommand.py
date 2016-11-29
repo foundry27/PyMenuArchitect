@@ -1,5 +1,7 @@
 from typing import Dict, Any
 
+import time
+
 from command import MenuCommand, ExitCode
 from commands.internal.datastoredependantcommand import DataStoreDependantCommand
 from session import Session
@@ -11,6 +13,7 @@ def get_data_points_per_line(session: Session) -> int:
         data_points_per_line = get_integer_from_user(session, 'How many data points per line should be outputted: ')
         if data_points_per_line <= 0:
             session.get_io().output('Your input must be greater than zero, instead got {}'.format(str(data_points_per_line)))
+            time.sleep(1)
             session.clear()
             continue
         return data_points_per_line

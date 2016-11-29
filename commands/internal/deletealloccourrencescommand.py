@@ -28,4 +28,6 @@ class DeleteAllOccurrencesCommand(MenuCommand):
         data = args['data']
         args['data'] = deque(filterfalse(lambda x: x == data_to_remove, data))
 
+        session.get_io().output('Removed {} data points'.format(len(data) - len(args['data'])))
+
         return ExitCode.SUCCESS

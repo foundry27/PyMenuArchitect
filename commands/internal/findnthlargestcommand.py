@@ -1,6 +1,8 @@
 import heapq
 from typing import Dict, Any
 
+import time
+
 from command import MenuCommand, ExitCode
 from commands.internal.datastoredependantcommand import DataStoreDependantCommand
 from session import Session
@@ -12,6 +14,7 @@ def get_number_off_largest(session: Session) -> int:
         num_off_largest = get_integer_from_user(session, 'For finding the nth largest element, n is: ')
         if num_off_largest <= 0:
             session.get_io().output('Your input must be greater than zero, instead got {}'.format(str(num_off_largest)))
+            time.sleep(1)
             session.clear()
             continue
         return num_off_largest

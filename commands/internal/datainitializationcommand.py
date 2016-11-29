@@ -13,6 +13,7 @@ def retrieve_data_point_count(session: Session) -> int:
         data_point_count = get_integer_from_user(session, 'How many data points do you want to create: ')
         if data_point_count <= 0:
             session.get_io().output('Your input must be greater than zero, instead got {}'.format(str(data_point_count)))
+            time.sleep(1)
             session.clear()
             continue
         return data_point_count
