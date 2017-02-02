@@ -1,11 +1,11 @@
-from typing import Dict, Any
-
 import time
+from typing import Dict, Any
 
 from command import MenuCommand, ExitCode
 from commands.internal.datastoredependantcommand import DataStoreDependantCommand
 from session import Session
-from utils import get_integer_from_user
+
+from src.utils import get_integer_from_user
 
 
 def get_data_points_per_line(session: Session) -> int:

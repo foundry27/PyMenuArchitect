@@ -1,8 +1,10 @@
-from command import MenuCommand, ExitCode
-from session import Session
 from typing import Dict, Any
+
+from command import MenuCommand, ExitCode
 from commands.internal.datastoredependantcommand import DataStoreDependantCommand
-from utils import get_integer_from_user
+from session import Session
+
+from src.utils import get_integer_from_user
 
 
 def get_data_to_try_to_sum(session: Session) -> int:

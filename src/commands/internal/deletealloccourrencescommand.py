@@ -1,10 +1,12 @@
 from collections import deque
 from itertools import filterfalse
-from command import MenuCommand, ExitCode
-from session import Session
 from typing import Dict, Any
+
+from command import MenuCommand, ExitCode
 from commands.internal.datastoredependantcommand import DataStoreDependantCommand
-from utils import get_integer_from_user
+from session import Session
+
+from src.utils import get_integer_from_user
 
 
 def get_data_to_remove(session: Session) -> int:

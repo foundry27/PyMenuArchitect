@@ -1,10 +1,12 @@
 import itertools
 import time
-from session import IODescriptor, Session
-from menu import Menu
-from command import MenuCommand, ExitCode
-from utils import MalformedInputException
 from typing import Dict, Any
+
+from command import MenuCommand, ExitCode
+from menu import Menu
+from session import IODescriptor, Session
+
+from src.utils import MalformedInputException
 
 
 class IllegalCommandIndexException(Exception):

@@ -1,7 +1,8 @@
-from enum import Enum
 from abc import ABCMeta, abstractmethod
-from session import Session
+from enum import Enum
 from typing import Dict, Any
+
+from src.session import Session
 
 
 class ExitCode(Enum):

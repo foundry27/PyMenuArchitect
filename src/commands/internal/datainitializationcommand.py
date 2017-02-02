@@ -5,7 +5,8 @@ from typing import Dict, Any, Optional
 
 from command import MenuCommand, ExitCode
 from session import Session
-from utils import get_integer_from_user
+
+from src.utils import get_integer_from_user
 
 
 def retrieve_data_point_count(session: Session) -> int:

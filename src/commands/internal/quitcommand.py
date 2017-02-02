@@ -1,7 +1,9 @@
-from command import MenuCommand, ExitCode
-from session import Session
 from sys import exit
 from typing import Dict, Any
+
+from command import MenuCommand, ExitCode
+
+from src.session import Session
 
 
 class QuitMenuCommand(MenuCommand):

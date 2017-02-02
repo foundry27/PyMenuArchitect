@@ -1,10 +1,12 @@
 import sys
-from runner import run_console
-from session import SessionWithIO
+
 from menu import SimpleMenu
+from runner import run_console
+
+from src.session import SessionWithIO
 
 if __name__ == "__main__":
-    from commands.commands import get_commands
+    from src.commands.commands import get_commands
 
     session = SessionWithIO(
         lambda: input(),

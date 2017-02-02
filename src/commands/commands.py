@@ -1,13 +1,15 @@
 from typing import List
+
 from command import MenuCommand
-from commands.internal.dataprintingcommand import DataPrintingCommand
-from commands.internal.quitcommand import QuitMenuCommand
-from commands.internal.datainitializationcommand import DataInitializationMenuCommand
 from commands.internal.appenddatapointcommand import AppendDataCommand
-from commands.internal.deletefirstoccurrencecommand import DeleteFirstOccurrenceCommand
+from commands.internal.datainitializationcommand import DataInitializationMenuCommand
+from commands.internal.dataprintingcommand import DataPrintingCommand
 from commands.internal.deletealloccourrencescommand import DeleteAllOccurrencesCommand
-from commands.internal.findnthlargestcommand import FindNthLargestCommand
+from commands.internal.deletefirstoccurrencecommand import DeleteFirstOccurrenceCommand
 from commands.internal.findfirstsumindexcommand import FindFirstSumIndexCommand
+from commands.internal.quitcommand import QuitMenuCommand
+
+from src.commands.internal.findnthlargestcommand import FindNthLargestCommand
 
 _MENU_COMMANDS = [DataInitializationMenuCommand(),
                   DataPrintingCommand(),

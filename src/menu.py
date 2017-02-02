@@ -1,6 +1,7 @@
 from abc import ABCMeta, abstractmethod
 from typing import List, Union
-from command import MenuCommand
+
+from src.command import MenuCommand
 
 
 class Menu(metaclass=ABCMeta):

@@ -1,6 +1,8 @@
-from command import MenuCommand, ExitCode
-from session import Session
 from typing import Dict, Any
+
+from command import MenuCommand, ExitCode
+
+from src.session import Session
 
 
 class DataStoreDependantCommand(MenuCommand):
